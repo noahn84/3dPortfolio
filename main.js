@@ -1,5 +1,8 @@
 import './style.css';
 import * as THREE from 'three';
+import meAndSmoke from './meAndSmoke.jpg';
+import moonPicture from './moon.jpg';
+import normalPicture from './normal.jpg';
 
 // Setup
 
@@ -51,7 +54,7 @@ Array(200).fill().forEach(addStar);
 
 // Avatar
 
-const noahTexture = new THREE.TextureLoader().load('meAndSmoke.jpg');
+const noahTexture = new THREE.TextureLoader().load(meAndSmoke);
 
 const noah = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: noahTexture }));
 
@@ -59,8 +62,8 @@ scene.add(noah);
 
 // Moon
 
-const moonTexture = new THREE.TextureLoader().load('moon.jpg');
-const normalTexture = new THREE.TextureLoader().load('normal.jpg');
+const moonTexture = new THREE.TextureLoader().load(moonPicture);
+const normalTexture = new THREE.TextureLoader().load(normalPicture);
 
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
